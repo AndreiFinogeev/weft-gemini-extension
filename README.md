@@ -31,14 +31,27 @@ On first use a browser window opens so you can sign in with your Weft account
 
 The extension connects Gemini CLI to Weft's hosted MCP server
 (`https://letsweft.com/api/mcp`, Streamable HTTP) and ships a context file that
-teaches Gemini the board's conventions. 18 tools cover the full surface:
+teaches Gemini the board's conventions.
+
+## Tools (32)
 
 | Category | Tools |
 |---|---|
 | Search | `search`, `fetch` |
 | Board | `initialize_board`, `get_board_state`, `list_columns` |
-| Tasks | `list_tasks`, `create_task`, `update_task`, `move_task`, `trash_task`, `restore_task` |
+| Tasks | `list_tasks`, `create_task`, `bulk_create_tasks`, `update_task`, `move_task`, `trash_task`, `restore_task`, `archive_done_tasks` |
+| Doing the work | `get_my_work`, `start_task`, `report_progress`, `complete_task` |
+| Asking the human | `request_input`, `submit_answer` |
+| Memory of decisions | `record_decision`, `get_context`, `get_task_history` |
+| Projects | `list_projects`, `create_project`, `update_project` |
 | Sprints | `list_sprints`, `get_active_sprint`, `create_sprint`, `start_sprint`, `complete_sprint`, `add_task_to_sprint`, `remove_task_from_sprint` |
+
+The four under **Doing the work** are what make this a board an agent can be
+trusted with rather than a to-do list with an API: `start_task` claims a task
+with a lease, `report_progress` renews the claim, and `complete_task` takes a
+receipt — artifacts you can check, and what was explicitly not done.
+`request_input` is the other half: a question only you can answer waits in your
+Inbox instead of being guessed at.
 
 Full tool reference: [letsweft.com/docs/mcp-tools](https://letsweft.com/docs/mcp-tools?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen)
 
