@@ -1,6 +1,6 @@
 # Weft for Gemini CLI
 
-Drive your [Weft](https://letsweft.com) Scrumban board without leaving the
+Drive your [Weft](https://letsweft.com/?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen) Scrumban board without leaving the
 terminal: capture tasks as you code, move work across Backlog → Todo → Doing →
 Done, and plan time-boxed sprints — just by asking Gemini.
 
@@ -16,7 +16,7 @@ Then start `gemini` and ask:
 
 On first use a browser window opens so you can sign in with your Weft account
 (OAuth 2.1 — no API keys to copy). A free account takes a minute:
-[letsweft.com/sign-up](https://letsweft.com/sign-up) — 50 tasks included.
+[letsweft.com/sign-up](https://letsweft.com/sign-up?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen) — 50 tasks included.
 
 ## What you can ask
 
@@ -40,17 +40,17 @@ teaches Gemini the board's conventions. 18 tools cover the full surface:
 | Tasks | `list_tasks`, `create_task`, `update_task`, `move_task`, `trash_task`, `restore_task` |
 | Sprints | `list_sprints`, `get_active_sprint`, `create_sprint`, `start_sprint`, `complete_sprint`, `add_task_to_sprint`, `remove_task_from_sprint` |
 
-Full tool reference: [letsweft.com/docs/mcp-tools](https://letsweft.com/docs/mcp-tools)
+Full tool reference: [letsweft.com/docs/mcp-tools](https://letsweft.com/docs/mcp-tools?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen)
 
 ## Notes
 
 - Deleting is safe: `trash_task` keeps tasks recoverable for 30 days.
 - Your board is private; tools are scoped to your account via OAuth.
 - The same MCP endpoint also works in Claude, ChatGPT, Cursor, and any
-  MCP-compatible client — see [letsweft.com/integrations](https://letsweft.com/integrations).
+  MCP-compatible client — see [letsweft.com/integrations](https://letsweft.com/integrations?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen).
 
 ## Support
 
-- Docs: [letsweft.com/docs](https://letsweft.com/docs)
+- Docs: [letsweft.com/docs](https://letsweft.com/docs?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen)
 - Email: support@letsweft.com
-- Privacy: [letsweft.com/privacy](https://letsweft.com/privacy)
+- Privacy: [letsweft.com/privacy](https://letsweft.com/privacy?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen)
