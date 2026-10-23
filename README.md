@@ -1,8 +1,13 @@
 # Weft for Gemini CLI
 
-Drive your [Weft](https://letsweft.com/?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen) Scrumban board without leaving the
-terminal: capture tasks as you code, move work across Backlog → Todo → Doing →
-Done, and plan time-boxed sprints — just by asking Gemini.
+**One board for every AI you use: agents claim tasks and finish with proof you
+accept or return.**
+
+[Weft](https://letsweft.com/?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen)
+is a task board for solo founders and small teams who work with AI. This
+extension puts Gemini CLI on it: capture tasks as you code, pick up work, and
+hand it back finished — on the same board Claude, ChatGPT, Cursor and Codex use,
+so no two agents redo the same thing.
 
 ## Install
 
@@ -15,8 +20,8 @@ Then start `gemini` and ask:
 > what's on my weft board?
 
 On first use a browser window opens so you can sign in with your Weft account
-(OAuth 2.1 — no API keys to copy). A free account takes a minute:
-[letsweft.com/sign-up](https://letsweft.com/sign-up?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen) — 50 tasks included.
+(OAuth 2.1 — nothing to copy). A free account takes a minute:
+[letsweft.com/sign-up](https://letsweft.com/sign-up?utm_source=github-gemini-ext&utm_medium=repo&utm_campaign=evergreen) — the free plan includes 50 active tasks and 200 tool calls a month.
 
 ## What you can ask
 

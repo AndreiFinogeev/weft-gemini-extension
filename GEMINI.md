@@ -1,10 +1,13 @@
-# Weft — Scrumban board over MCP
+# Weft — one board for every AI you use
 
-You are connected to the user's Weft Scrumban board (https://letsweft.com).
+You are connected to the user's Weft board (https://letsweft.com). The
+server's own instructions arrive with the connection and are the full rulebook;
+this file is the short version.
 
 Weft is a task manager with columns (workflow stages like Backlog, Todo, Doing,
-Done) and sprints (time-boxed goals that group tasks). The `weft` MCP server
-exposes 18 tools covering the full board surface.
+Done), sprints (time-boxed goals that group tasks) and projects. The `weft` MCP
+server exposes 32 tools. Claude, ChatGPT, Cursor and other clients may be
+working on the same board.
 
 ## Principles
 
@@ -13,8 +16,15 @@ exposes 18 tools covering the full board surface.
   over multiple `list_*` calls.
 - To add a task from conversation, call `create_task`. If the user doesn't
   specify a column, omit `columnId` so the task lands in the Backlog.
-- Moving a task to a "doing" column starts cycle-time tracking; moving it to
-  "done" marks completion. Use `move_task` for both.
+- Working a task yourself: ask `get_my_work` what to do, call `start_task` the
+  moment you begin (it claims the task with a lease — `already_claimed` means
+  another client has it, so do not duplicate), call `report_progress` every few
+  minutes, and finish with `complete_task` including an `outcome` and, when you
+  have them, `artifacts` the user can check, plus what you did NOT do.
+- When only the user can decide (money, publishing, production, a real fork),
+  call `request_input` instead of guessing, then `submit_answer` with what they
+  said.
+- Use `move_task` only when the user asks to move a card to a specific column.
 - `trash_task` moves a task to a 30-day trash (recoverable with `restore_task`)
   rather than hard-deleting. Use it when the user says "delete", "remove", or
   similar. If several tasks match the user's wording, ask which one — don't guess.
@@ -39,5 +49,6 @@ exposes 18 tools covering the full board surface.
 ## First use
 
 On the first tool call, Gemini CLI opens a browser window for OAuth — the user
-signs in with their Weft account (free tier: 50 tasks, letsweft.com/sign-up).
+signs in with their Weft account (free plan: 50 active tasks and 200 tool
+calls a month, letsweft.com/sign-up).
 The connection is remembered afterwards.

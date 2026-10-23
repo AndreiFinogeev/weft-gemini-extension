@@ -1,7 +1,7 @@
 {
   "name": "weft",
-  "version": "1.0.0",
-  "description": "Drive your Weft Scrumban board from Gemini CLI — capture tasks, run sprints, and keep flow, all over MCP with OAuth sign-in.",
+  "version": "1.0.1",
+  "description": "One board for every AI you use: Gemini claims tasks on your Weft board and finishes with proof you accept or return.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "weft": {
